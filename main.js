@@ -5,6 +5,21 @@ eH1.textContent = "olá mundo!";
 const eTabuleiro = cria_tabuleiro();
 document.body.append(eTabuleiro);
 
+for (let i = 0; i < 7; i++ ){
+
+    const eDisco = cria_disco();
+    eTabuleiro.append(eDisco);
+
+}
+
+function cria_disco(){
+
+    const novo_disco = document.createElement("div");
+    novo_disco.classList.add("disco");
+    return novo_disco;
+
+}
+
 function cria_tabuleiro(){
 
     const novo_tabuleiro =  document.createElement("div");
