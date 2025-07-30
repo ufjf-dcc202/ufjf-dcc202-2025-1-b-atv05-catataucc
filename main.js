@@ -1,3 +1,5 @@
+import { get_tabuleiro } from "./discos.js";
+
 const eH1 = document.querySelector("h1");
 eH1.textContent = "olá mundo!";
 
@@ -5,19 +7,14 @@ eH1.textContent = "olá mundo!";
 const eTabuleiro = cria_tabuleiro();
 document.body.append(eTabuleiro);
 
+const tabuleiro = get_tabuleiro();
+
 for (let i = 0; i < 7; i++ ){
 
     const eDisco = cria_disco();
     eTabuleiro.append(eDisco);
-
-    if(i < 3 ){
-        eDisco.dataset.cor = "branco";
-    } else if ( i > 3 ){
-        eDisco.dataset.cor = "preto";
-    } else {
-        eDisco.dataset.cor = "transparente";
-    }
-
+    eTabuleiro.append(eDisco);
+    eDisco.dataset.cor = tabuleiro[i];
 }
 
 function cria_disco(){
