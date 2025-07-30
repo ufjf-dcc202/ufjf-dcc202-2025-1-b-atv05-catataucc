@@ -10,7 +10,8 @@
     <script type="module" src="./main.js"></script>
     
     <style>
-        * { 
+
+        *{ 
             box-sizing: border-box;
         }
 
@@ -19,7 +20,7 @@
             grid-template-columns: repeat(7,25px);
             gap: 2px;
             min-height: 25px;
-            background-color: lightgreen;
+            background-color: rgb(48, 48, 48);
             width: fit-content;
         }
 
@@ -27,8 +28,21 @@
             border: 1px solid black;
             border-radius: 50%;
         }
-    </style>
 
+        .disco[data-cor = "preto"]{
+            background: radial-gradient(circle at top, white, black);   
+        }
+
+        .disco[data-cor = "branco"]{
+            background: radial-gradient(circle at top, white, blue);   
+        }
+
+        .disco[data-cor = "transparente"]{
+            border-color: transparent;  
+        }
+
+</style>
+    
 </head>
 
 <body>
